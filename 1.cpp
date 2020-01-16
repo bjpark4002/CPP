@@ -1,6 +1,77 @@
 #include <iostream>
 
 
+//reference
+
+void SwapByRef(int &ref1, int &ref2){
+    int temp=ref1;
+    ref1=ref2;
+    ref2=temp;
+}
+
+void SwapPointer(int *ptr1, int *ptr2){
+    int tem = *ptr1;
+    *ptr1 = *ptr2;
+    *ptr2 = tem;
+}
+
+int Adder(const int &a, const int &b){
+    return a+b;
+}
+int main(){
+    // int num = 10;
+
+    // int &num2 = num;
+    // num2++;
+    // std::cout<<num<<std::endl<<num2<<std::endl<<std::endl;
+
+
+    // int num = 1000;
+    // int *num2 = &num;
+    // int **num3 = &num2;
+
+    // int &ref = num;
+    // int *(&ref2)= num2;
+    // int **(&ref3)= num3;
+
+
+
+    // std::cout<< num << " "<< num2<< " " << num3 <<std::endl;
+    // // num++;
+    // // *num2 += 1;
+    // // **num3 += 2;
+
+    // ref++;
+    // *ref2 += 1;
+    // **ref3 += 1;
+
+    // std::cout<< ref << " "<< ref2<< " " << ref3 <<std::endl;
+
+    // int val1 = 10;
+    // int val2 = 20;
+
+    // SwapByRef(val1,val2);
+
+    // std::cout<<"val1 = "<<val1<<std::endl;
+    // std::cout<<"val2 = "<<val2<<std::endl;
+
+    int num1 = 5;
+    int num2 = 10;
+    int *ptr1=&num1;
+    int *ptr2=&num2;
+
+    SwapPointer(ptr1,ptr2);
+    std::cout<<"ptr1 = "<<*ptr1<<std::endl;
+    std::cout<<"ptr2 = "<<*ptr2<<std::endl;
+
+    int AdderAnswer = Adder(3,5);
+    std::cout<< " 3 + 5 = : "<<AdderAnswer<<std::endl;
+
+}
+
+
+/*
+
 int tem = 100;
 namespace wow{
     void func(){
@@ -14,7 +85,7 @@ int main(){
 
     wow::func();
 }
-
+*/
 /*
 namespace AAA{
 
