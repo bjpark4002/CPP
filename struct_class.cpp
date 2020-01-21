@@ -20,6 +20,7 @@ public:
     //     fuelGauge=Fuel;
     //     curSpeed=0;
     // }
+    
     void InitMembers(char * ID, int fuel);
     void ShowCarState();
     void Accel();
@@ -83,7 +84,7 @@ int main(void){
 
     study more about enum, namespace
     When you declare and implement functions in class/struct, it works like inline
-    if you only declare and implement outside of class/struct, it wont work as inline
+    if you only declare and implement outside of class/struct, it won't work as inline
     so if you want to want them to work lke inline, you have to put keyword inline in front of definition of function
     ex:
 
