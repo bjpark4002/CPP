@@ -20,7 +20,7 @@ public:
     //     fuelGauge=Fuel;
     //     curSpeed=0;
     // }
-    
+
     void InitMembers(char * ID, int fuel);
     void ShowCarState();
     void Accel();
@@ -62,6 +62,9 @@ void Car::Break(){
 }
 
 int main(void){
+    /*
+    static allocation.
+
     Car run99;
     char * tem = "Bumjin";
     run99.InitMembers(tem,1000);
@@ -72,6 +75,21 @@ int main(void){
 
     run99.Break();
     run99.ShowCarState();
+    */
+
+
+
+    // dynamic allocation.
+    Car *run99 = new Car;
+    char * tem = "Bumjin";
+    run99->InitMembers(tem,1000);
+    run99->Accel();
+    run99->Accel();
+    run99->Accel();
+    run99->ShowCarState();
+
+    run99->Break();
+    run99->ShowCarState();
 
     return 0;       
 
