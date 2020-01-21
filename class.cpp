@@ -10,6 +10,14 @@ private:
     int c;
 
 public:
+    SimpleClass(int aa = 100, int bb = 200, int cc = 300)
+     : a(aa), b(bb), c(cc)
+    {
+        std::cout<<"Constructor invoked"<<std::endl;
+        // a = aa;
+        // b = bb;
+        // c = cc;
+    }
     void InitMembers(int aa = 10 , int bb = 20 , int cc = 30){
         a = aa;
         b = bb;
@@ -33,9 +41,16 @@ int main (void){
 
     std::cout<<" Test "<<std::endl;
 
+    /*
     SimpleClass * ob = new SimpleClass;
 
     ob->InitMembers(1,2);
     ob->ShowState();
+    */
+
+    SimpleClass * ob = new SimpleClass();
+
+    ob->ShowState();
+
 
 }
