@@ -16,11 +16,15 @@ public:
         c = cc;
 
     }
-    void ShowState(){
+    void ShowState() const {  // add const keyword to prevent modification of private variables.
+ 
+        
         std::cout<<"a = "<<a<<std::endl;
         std::cout<<"b = "<<b<<std::endl;
         std::cout<<"c = "<<c<<std::endl;
+        
     }
+
 
 
 };
