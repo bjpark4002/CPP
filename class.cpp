@@ -22,10 +22,15 @@ public:
     void showStatus(void){
         std::cout<<"num1 : "<<num1<<" num2 : "<<num2<<std::endl;
     }
+    ~SimpleTest(){
+        std::cout<<" Destroy class!!! "<<std::endl;
+    }
 
 };
 
 int main(void){
+
+    // copy constructor = shallow copy.x
 
 
     // SimpleTest *tem = new SimpleTest(10,15);
