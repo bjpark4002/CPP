@@ -15,9 +15,9 @@ public:
     }
 
 
-    SimpleTest(SimpleTest & copy) : num1(copy.num1), num2(copy.num2)
+    explicit SimpleTest(const SimpleTest & copy) : num1(copy.num1), num2(copy.num2)
     {
-        std::cout<<"copy constructor is invoked"<<std::endl;
+        std::cout<<"--------copy constructor is invoked -------------"<<std::endl;
     }
     void showStatus(void){
         std::cout<<"num1 : "<<num1<<" num2 : "<<num2<<std::endl;
@@ -28,12 +28,21 @@ public:
 int main(void){
 
 
-    SimpleTest *tem = new SimpleTest(10,15);
-    tem->showStatus();
+    // SimpleTest *tem = new SimpleTest(10,15);
+    // tem->showStatus();
 
-    SimpleTest *tem2 = tem;
+    // SimpleTest *tem2 = tem;
+    // // SimpleTest *tem2(tem);
 
-    tem2->showStatus();
+    // // tem2->showStatus();
+
+
+
+    SimpleTest a1(20,40);
+    SimpleTest a2(a1);
+
+    a1.showStatus();
+    a2.showStatus();
 
 
 
