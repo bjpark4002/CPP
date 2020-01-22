@@ -39,7 +39,12 @@ int main(void){
 
 
     SimpleTest a1(20,40);
-    SimpleTest a2=a1;//(a1);
+    SimpleTest a2(a1);  // you can't do a2=a1 because of explicit.
+
+    /*
+    if you don't wanna copy class with ' = ', 
+    you have to put key word 'explicit' in front of copy constructor.
+    */
 
     a1.showStatus();
     a2.showStatus();
