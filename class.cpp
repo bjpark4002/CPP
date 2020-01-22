@@ -15,7 +15,7 @@ public:
     }
 
 
-    explicit SimpleTest(const SimpleTest & copy) : num1(copy.num1), num2(copy.num2)
+    explicit SimpleTest(const SimpleTest & copy) : num1(copy.num1+1), num2(copy.num2+1)
     {
         std::cout<<"--------copy constructor is invoked -------------"<<std::endl;
     }
@@ -39,7 +39,7 @@ int main(void){
 
 
     SimpleTest a1(20,40);
-    SimpleTest a2(a1);
+    SimpleTest a2=a1;//(a1);
 
     a1.showStatus();
     a2.showStatus();
