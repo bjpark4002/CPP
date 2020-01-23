@@ -4,6 +4,53 @@
 using namespace std;
 
 
+class Person{
+private:
+    int age;
+    std::string name;
+public:
+    Person(){
+
+    }
+    Person(int age, std::string name): age(age), name(name){
+        std::cout<<"Person constructor invoked"<<std::endl;
+    }
+    void getName(){
+        std::cout<<"Name: "<<name<<std::endl;
+    }
+    void getAge(){
+        std::cout<<"Age : "<<age<<std::endl;
+
+    }
+};
+class UnivStudent : public Person
+{ 
+private:
+    std::string major;
+public:
+    UnivStudent(){
+
+    }
+    UnivStudent(int age, std::string name, std::string major): major(major), Person(age,name){
+        std::cout<<"UnivStudent constructor invoked"<<std::endl;
+    }
+    void status(){
+        getName();
+        getAge();
+        std::cout<<"Major: "<<major<<std::endl<<std::endl;
+    }   
+
+};
+
+int main(void){
+
+    // UnivStudent test(27,"Bumjin", "Computer Science");
+    UnivStudent test2;
+    test2.status();
+    // test.status();
+    return 0;
+}
+/*
 class PermanentWorker{
 
 private:
@@ -76,3 +123,4 @@ int main(void){
 
     return 0;
 }
+*/
